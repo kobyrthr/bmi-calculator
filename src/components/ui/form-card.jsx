@@ -8,16 +8,16 @@ import InformationBar from './information-bar.jsx';
 
 const FormCard = () => {
   return (
-    <Card>
-      <CardContent className="flex flex-col gap-6">
+    <Card className="max-w-[564px] h-fit">
+      <CardContent className="flex flex-col gap-6 ">
         <CardTitle>Enter your details below</CardTitle>
         <RadioGroup defaultValue="metric">
-          <div className="flex justify-between gap-6">
-            <div className="flex items-center space-x-2">
+          <div className="grid grid-cols-2 gap-6">
+            <div className="flex items-center space-x-2 w-1/2">
               <RadioGroupItem value="metric" id="metric" />
               <Label htmlFor="metric">Metric</Label>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 w-1/2">
               <RadioGroupItem value="imperial" id="imperial" />
               <Label htmlFor="imperial">Imperial</Label>
             </div>
@@ -31,7 +31,7 @@ const FormCard = () => {
                 Height
               </Typography>
             </Label>
-            <InputMetric id="height" label="Height" placeholder="0" unit="cm" />
+            <InputMetric id="height" label="Height" placeholder={0} unit="cm" />
           </div>
           <div className="flex flex-col gap-2 text-gre">
             <Label htmlFor="weight" className="text-grey-500">
@@ -39,11 +39,10 @@ const FormCard = () => {
                 Weight
               </Typography>
             </Label>
-            <InputMetric id="weight" label="Weight" placeholder="0" unit="kg" />
+            <InputMetric id="weight" label="Weight" placeholder={0} unit="kg" />
           </div>
         </div>
         <InformationBar variant="default" className="w-full max-w-full" />
-        <InformationBar variant="bmi" className="w-full max-w-full" />
       </CardContent>
     </Card>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import { Input } from './input';
 import { Typography } from './typography';
 
-const InputMetric = ({ unit = 'cm', props }) => {
+const InputMetric = ({ unit = 'cm', ...props }) => {
   return (
     <div className="relative">
       <Input

@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <ClientLayout>
-          <main className="block w-full relative ">{children}</main>
+          <main className="block w-full relative">{children}</main>
         </ClientLayout>
       </body>
     </html>
