@@ -10,6 +10,10 @@ const config = {
   theme: {
     extend: {
       colors: {
+        grey: {
+          500: 'hsl(var(--grey-500))',
+          300: 'hsl(var(--grey-300))',
+        },
         success: 'hsl(var(--success))',
         warning: 'hsl(var(--warning))',
         popover: {
