@@ -1,13 +1,11 @@
 'use client';
 import { CompanyContext } from '@/context/company-context';
 import { useContext, useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Typography } from '@/components/ui/typography';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
-import FormCard from '@/components/ui/form-card';
+import HeroSection from '@/components/ui/hero-section';
+import BMIResultSection from '@/components/ui/bmi-result-section';
 
 export default function Home() {
   const router = useRouter();
@@ -38,8 +36,9 @@ export default function Home() {
   };
 
   return (
-    <div className="-mt-10 grid items-center justify-items-center size-full !pt-0 max-[376px]:p-6 p-12 px-10 lg:px-40 gap-16">
-      <FormCard />
+    <div className="flex flex-col">
+      <HeroSection />
+      <BMIResultSection />
     </div>
   );
 }
