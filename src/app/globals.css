@@ -1,13 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer base {
+  @theme {
+    --color-blue-900: hsl(215 31% 21%);
+    --color-blue-500: hsl(227 92% 58%);
+    --color-blue-300: hsl(209 69% 82%);
+    --color-blue-100: hsl(228 94% 94%);
+  }
   :root {
+    --grey-500: 215 17% 45%;
+    --grey-300: 215 43% 77%;
+    --blue-900: 215 31% 21%;
+    --blue-500: 227 92% 58%;
+    --blue-300: 209 69% 82%;
+    --blue-100: 228 94% 94%;
+    --gradient-1: 183 95% 92%;
+    --gradient-1: 216 95% 92%;
     --success: 160 67% 52%;
     --warning: 34 100% 50%;
     --background: 231 27% 98%;
@@ -80,72 +92,5 @@ body {
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-.text-regular {
-  @apply text-[15px] font-bold tracking-[-0.25px] leading-[15px];
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
