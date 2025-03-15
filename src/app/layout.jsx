@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import ClientLayout from './client-layout';
 
-const leagueSpartan = Inter({
+const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
 });
@@ -19,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${leagueSpartan.className} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <ClientLayout>
           <main className="block w-full relative ">{children}</main>
         </ClientLayout>

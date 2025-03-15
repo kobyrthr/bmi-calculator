@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
+import FormCard from '@/components/ui/form-card';
 
 export default function Home() {
   const router = useRouter();
@@ -37,6 +38,8 @@ export default function Home() {
   };
 
   return (
-    <div className="-mt-10 grid items-center justify-items-center size-full !pt-0 max-[376px]:p-6 p-12 px-10 lg:px-40 gap-16"></div>
+    <div className="-mt-10 grid items-center justify-items-center size-full !pt-0 max-[376px]:p-6 p-12 px-10 lg:px-40 gap-16">
+      <FormCard />
+    </div>
   );
 }
