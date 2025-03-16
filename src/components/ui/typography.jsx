@@ -10,7 +10,8 @@ export const typography = cva('text-blue-900', {
       'preset-3': 'font-semibold text-[32px] leading-[110%] tracking-[-5%]',
       'preset-4': 'font-semibold text-[24px] leading-[120%] tracking-[-5%]',
       'preset-5': 'font-semibold text-[20px] leading-[120%] tracking-[-5%]',
-      'preset-6': 'font-semibold text-[16px] leading-[150%] tracking-[-0%]',
+      'preset-6':
+        'text-grey-500 font-semibold text-[16px] leading-[150%] tracking-[-0%]',
       'preset-7': 'font-normal text-[14px] leading-[150%] tracking-[-0%]',
     },
   },

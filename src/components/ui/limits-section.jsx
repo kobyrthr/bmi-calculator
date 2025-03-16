@@ -71,7 +71,7 @@ const LimitsSection = () => {
           </Typography>
           <Typography
             type="preset-6"
-            className="font-normal mt-8 max-w-[616px] mx-auto xl:max-w-full text-grey-500"
+            className="font-normal mt-8 max-w-[616px] mx-auto xl:max-w-full"
           >
             Although BMI is often a practical indicator of healthy weight, it is
             not suited for every person. Specific groups should carefully
