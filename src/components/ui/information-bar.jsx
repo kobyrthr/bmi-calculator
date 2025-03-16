@@ -58,7 +58,7 @@ const InformationBar = ({
 
           <Typography
             type="preset-7"
-            className="text-white w-1/2 max-w-[206px]"
+            className="text-white w-1/2 max-w-[206px] min-h-[105px]"
           >
             {loading ? 'Calculating...' : bmiMessage}
           </Typography>
