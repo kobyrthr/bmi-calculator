@@ -3,12 +3,12 @@ import { Typography } from './typography';
 import { cva } from 'class-variance-authority';
 
 const informationBarVariants = cva(
-  'p-8 rounded-l-2xl rounded-r-[99px] bg-blue-500 text-white flex', // base styles
+  'p-8 rounded-2xl sm:rounded-l-2xl sm:rounded-r-[99px] bg-blue-500 text-white flex', // base styles
   {
     variants: {
       variant: {
         default: 'flex-col',
-        bmi: 'flex-row gap-6',
+        bmi: 'flex-col items-start min-[540px]:items-start min-[540px]:flex-row gap-6',
       },
     },
     defaultVariants: {

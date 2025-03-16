@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="absolute max-h-[640px] xl:max-h-[737px] right-0 xl:right-2/6 z-0 inset-0  bg-linear-to-r from-white to-gradient-2 rounded-b-[35px]"></div>
       <div
         className={cn(
-          'w-full px-10 xl:max-w-[1160px] py-8 xl:py-[88px] z-10 pb-[121px]'
+          'w-full px-6 sm:px-10 xl:max-w-[1160px] py-8 xl:py-[88px] z-10 pb-[121px]'
         )}
       >
         <Image
