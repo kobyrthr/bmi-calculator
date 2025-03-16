@@ -31,10 +31,10 @@ const TipsSection = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center w-full relative px-10 py-2.5">
-      <div className="flex py-20.5 items-center justify-center gap-8 bg-linear-to-r from-white to-gradient-2/25 rounded-r-[35px] w-full">
+    <section className="flex flex-col items-center justify-center w-full relative lg:px-10 py-12.5 lg:py-2.5">
+      <div className="flex flex-col lg:flex-row px-10 lg:px-4 py-20.5 items-start lg:items-center justify-center gap-8 bg-gradient-2/25 lg:bg-linear-to-r lg:from-white lg:to-gradient-2/25 lg:rounded-r-[35px] w-full">
         {tips.map((item) => (
-          <div key={item.id} className="max-w-[365px]">
+          <div key={item.id} className="max-w-full lg:max-w-[365px]">
             <Image src={item.icon} alt={item.title} height={64} width={64} />
             <Typography type="preset-4" className="mt-12">
               {item.title}

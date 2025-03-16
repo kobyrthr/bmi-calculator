@@ -6,7 +6,7 @@ import { Typography } from '@/components/ui/typography';
 
 const BMIResultSection = () => {
   return (
-    <section className="pt-0 xl:pt-40 pb-22">
+    <section className="pt-0 xl:pt-40 xl:pb-22">
       <div className="max-xl:gap-18 pr-11 xl:pr-0 xl:mx-auto flex flex-row justify-between items-center w-full mx-auto max-w-[841px] xl:max-w-[1160px] relative">
         <Image
           src={LineLeft}
