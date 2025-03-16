@@ -6,21 +6,21 @@ import { Typography } from '@/components/ui/typography';
 
 const BMIResultSection = () => {
   return (
-    <section className="pt-40 pb-22">
-      <div className="mx-auto flex flex-row justify-between items-center max-w-[1160px] relative">
+    <section className="pt-0 xl:pt-40 pb-22">
+      <div className="max-xl:gap-18 pr-11 xl:pr-0 xl:mx-auto flex flex-row justify-between items-center w-full mx-auto max-w-[841px] xl:max-w-[1160px] relative">
         <Image
           src={LineLeft}
           alt="line-left"
           height={200}
           width={85}
-          className="absolute right-24 -top-40"
+          className="absolute hidden xl:block right-24 -top-40"
         />
         <Image
           src={ManEating}
           width={564}
           height={533}
           alt="man-eating"
-          className="self-start"
+          className="self-start w-[361px] h-[411px] object-contain xl:h-[533px] xl:w-[564px] -ml-10.5 xl:ml-0"
         />
         <div className="flex flex-col max-w-[465px] gap-8 relative self-end pb-11">
           <Typography type="preset-2" className="text-blue-900">
