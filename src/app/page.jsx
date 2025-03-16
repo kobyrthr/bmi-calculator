@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import HeroSection from '@/components/ui/hero-section';
 import BMIResultSection from '@/components/ui/bmi-result-section';
 import TipsSection from '@/components/ui/tips-section';
+import LimitsSection from '@/components/ui/limits-section';
 
 export default function Home() {
   const router = useRouter();
@@ -41,6 +42,7 @@ export default function Home() {
       <HeroSection />
       <BMIResultSection />
       <TipsSection />
+      <LimitsSection />
     </div>
   );
 }

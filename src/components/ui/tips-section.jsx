@@ -35,7 +35,7 @@ const TipsSection = () => {
       <div className="flex py-20.5 items-center justify-center gap-8 bg-linear-to-r from-white to-gradient-2/25 rounded-r-[35px] w-full">
         {tips.map((item) => (
           <div key={item.id} className="max-w-[365px]">
-            <Image src={item.icon} alt="icon-eating" height={64} width={64} />
+            <Image src={item.icon} alt={item.title} height={64} width={64} />
             <Typography type="preset-4" className="mt-12">
               {item.title}
             </Typography>
