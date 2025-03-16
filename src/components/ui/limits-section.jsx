@@ -64,14 +64,23 @@ const LimitsSection = () => {
 
   return (
     <section className="flex flex-col items-center justify-center w-full relative py-[99px] xl:py-[115px] px-[40px] min-[1440px]:px-[140px] ">
-      <div className="relative w-full max-w-[1160px] min-h-[934px] h-full">
+      <div className="relative w-full max-w-[1160px] xl:min-h-[704px] h-full">
         <div className="xl:max-w-[564px] mx-auto xl:mx-0 xl:absolute left-0">
-          <Typography type="preset-2" className="text-center xl:text-start">
+          <Typography
+            type="preset-2"
+            className="text-center xl:text-start hidden sm:block"
+          >
+            Limitations of BMI
+          </Typography>
+          <Typography
+            type="preset-3"
+            className="text-center xl:text-start block sm:hidden"
+          >
             Limitations of BMI
           </Typography>
           <Typography
             type="preset-6"
-            className="font-normal mt-8 max-w-[616px] mx-auto xl:max-w-full"
+            className="font-normal mt-8 max-w-[616px] mx-auto text-center xl:text-start xl:max-w-full"
           >
             Although BMI is often a practical indicator of healthy weight, it is
             not suited for every person. Specific groups should carefully
@@ -94,7 +103,7 @@ const LimitsSection = () => {
           </div>
         </div>
 
-        <div className="flex xl:hidden mx-auto xl:mx-0 xl:absolute right-0 w-full max-w-[961px] h-full flex-row flex-wrap justify-center gap-8 mt-14">
+        <div className="flex xl:hidden mx-auto xl:mx-0 xl:absolute right-0 w-full max-w-[961px] h-full flex-row flex-wrap justify-center gap-4 sm:gap-8 mt-14">
           <LimitCard item={limits[0]} />
           <LimitCard item={limits[1]} />
           <LimitCard item={limits[2]} />
