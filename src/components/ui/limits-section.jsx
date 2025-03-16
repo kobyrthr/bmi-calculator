@@ -64,7 +64,7 @@ const LimitsSection = () => {
 
   return (
     <section className="flex flex-col items-center justify-center w-full relative py-[115px] px-[140px] ">
-      <div className="relative w-[1160px] min-h-[934px] h-full">
+      <div className="relative w-full max-w-[1160px] min-h-[934px] h-full">
         <div className="max-w-[564px] absolute left-0">
           <Typography type="preset-2">Limitations of BMI</Typography>
           <Typography type="preset-6" className="font-normal mt-8">

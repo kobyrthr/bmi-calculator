@@ -54,16 +54,15 @@ const FormCard = ({ selectedUnit, setSelectedUnit }) => {
     }
   }, [selectedUnit, height, weight, feet, stones, inches, pounds]);
 
-  console.log('debug - bmi', bmi);
   return (
-    <Card className="max-w-[564px] h-fit mt-4">
+    <Card className="xl:max-w-[564px] h-fit mt-4">
       <CardContent className="flex flex-col gap-8  p-8">
         <CardTitle>
           <Typography type="preset-4">Enter your details below</Typography>
         </CardTitle>
         <RadioGroup
           defaultValue={selectedUnit}
-          onValueChange={(e) => setSelectedUnit(e.target.value)}
+          onValueChange={(value) => setSelectedUnit(value)}
         >
           <div className="grid grid-cols-2 gap-6">
             <div className="flex items-center space-x-2 w-1/2">

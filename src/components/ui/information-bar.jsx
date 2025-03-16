@@ -36,7 +36,10 @@ const InformationBar = ({ bmi = 0, variant, className, ...props }) => {
             <Typography type="preset-6" className="text-white">
               Your BMI is...
             </Typography>
-            <Typography type="preset-1" className="text-white">
+            <Typography
+              type="preset-1"
+              className="text-white max-w-[4ch] overflow-x-auto overflow-y-hidden"
+            >
               {bmi === 0 ? bmi : bmi.toFixed(1)}
             </Typography>
           </div>
