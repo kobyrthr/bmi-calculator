@@ -3,7 +3,7 @@ import { Typography } from './typography';
 import { cva } from 'class-variance-authority';
 
 const informationBarVariants = cva(
-  'p-8 rounded-2xl sm:rounded-l-2xl sm:rounded-r-[99px] bg-blue-500 text-white flex', // base styles
+  'p-8 rounded-2xl sm:rounded-l-2xl sm:rounded-r-[99px] bg-blue-500 text-white flex min-h-[105px]', // base styles
   {
     variants: {
       variant: {
@@ -17,8 +17,16 @@ const informationBarVariants = cva(
   }
 );
 
-const InformationBar = ({ bmi = 0, variant, className, ...props }) => {
+const InformationBar = ({
+  bmi = 0,
+  bmiMessage = '',
+  variant,
+  className,
+  loading = false,
+  ...props
+}) => {
   bmi = parseFloat(bmi);
+
   return (
     <div className={informationBarVariants({ variant, className })} {...props}>
       {variant === 'default' ? (
@@ -36,20 +44,23 @@ const InformationBar = ({ bmi = 0, variant, className, ...props }) => {
             <Typography type="preset-6" className="text-white">
               Your BMI is...
             </Typography>
-            <Typography
-              type="preset-1"
-              className="text-white max-w-[4ch] overflow-x-auto overflow-y-hidden"
-            >
-              {bmi === 0 ? bmi : bmi.toFixed(1)}
-            </Typography>
+            {loading ? (
+              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-white"></div>
+            ) : (
+              <Typography
+                type="preset-1"
+                className="text-white max-w-[4ch] overflow-x-auto overflow-y-hidden"
+              >
+                {bmi === 0 ? bmi : bmi.toFixed(1)}
+              </Typography>
+            )}
           </div>
 
           <Typography
             type="preset-7"
             className="text-white w-1/2 max-w-[206px]"
           >
-            Your BMI suggests you're a healthy weight. Your ideal weight is
-            between <span className="font-bold">63.3kgs - 85.2kgs</span>.
+            {loading ? 'Calculating...' : bmiMessage}
           </Typography>
         </>
       )}

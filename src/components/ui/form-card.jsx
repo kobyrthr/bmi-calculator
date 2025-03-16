@@ -14,8 +14,10 @@ const FormCard = ({ selectedUnit, setSelectedUnit }) => {
   const [stones, setStones] = useState(null);
   const [pounds, setPounds] = useState(null);
   const [bmi, setBmi] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const calculateBMI = () => {
+    setIsLoading(true);
     if (selectedUnit === 'metric') {
       if (height && weight) {
         // Convert height to meters and calculate BMI
@@ -35,6 +37,55 @@ const FormCard = ({ selectedUnit, setSelectedUnit }) => {
         const bmiValue = weightInKg / (heightInMeters * heightInMeters);
         setBmi(bmiValue.toFixed(1));
       }
+    }
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+  };
+
+  const getIdealWeightRange = () => {
+    if (!height && !feet) return 'No input provided.';
+
+    // Calculate height in meters regardless of unit
+    let heightInMeters;
+    if (selectedUnit === 'metric') {
+      heightInMeters = height / 100;
+    } else {
+      const heightInInches = feet * 12 + Number(inches || 0);
+      heightInMeters = heightInInches * 0.0254;
+    }
+
+    // Calculate ideal weight range using BMI range of 18.5 - 24.9
+    const minWeight = 18.5 * (heightInMeters * heightInMeters);
+    const maxWeight = 24.9 * (heightInMeters * heightInMeters);
+
+    if (selectedUnit === 'metric') {
+      const bmiCategory =
+        bmi < 18.5
+          ? 'underweight'
+          : bmi < 24.9
+          ? 'a healthy weight'
+          : bmi < 29.9
+          ? 'overweight'
+          : 'obese';
+      return `Your BMI suggests you're ${bmiCategory}. Your ideal weight is between ${minWeight.toFixed(
+        1
+      )}kgs - ${maxWeight.toFixed(1)}kgs.`;
+    } else {
+      // Convert kg to stones and pounds
+      const minStones = Math.floor((minWeight * 2.20462) / 14);
+      const minPounds = Math.round((minWeight * 2.20462) % 14);
+      const maxStones = Math.floor((maxWeight * 2.20462) / 14);
+      const maxPounds = Math.round((maxWeight * 2.20462) % 14);
+      const bmiCategory =
+        bmi < 18.5
+          ? 'underweight'
+          : bmi < 24.9
+          ? 'a healthy weight'
+          : bmi < 29.9
+          ? 'overweight'
+          : 'obese';
+      return `Your BMI suggests you're ${bmiCategory}. Your ideal weight is between ${minStones}st ${minPounds}lbs - ${maxStones}st ${maxPounds}lbs.`;
     }
   };
 
@@ -158,8 +209,10 @@ const FormCard = ({ selectedUnit, setSelectedUnit }) => {
         )}
         <InformationBar
           variant="bmi"
+          loading={isLoading}
           className="w-full max-w-full"
           bmi={bmi ?? 0}
+          bmiMessage={getIdealWeightRange()}
         />
       </CardContent>
     </Card>
