@@ -12,7 +12,7 @@ export const metadata = {
   description:
     'Calculate your Body Mass Index (BMI) with our easy-to-use calculator. Get instant results and understand your body composition better with this simple yet effective BMI measurement tool.',
   icons: {
-    icon: '/logo.png',
+    icon: '/logo.svg',
   },
 };
 
