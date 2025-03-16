@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import HeroSection from '@/components/ui/hero-section';
 import BMIResultSection from '@/components/ui/bmi-result-section';
+import TipsSection from '@/components/ui/tips-section';
 
 export default function Home() {
   const router = useRouter();
@@ -39,6 +40,7 @@ export default function Home() {
     <div className="flex flex-col">
       <HeroSection />
       <BMIResultSection />
+      <TipsSection />
     </div>
   );
 }
